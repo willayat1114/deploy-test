@@ -1,5 +1,5 @@
 {
-    "version": "1.0",
+    "version": "2",
     "app": {
       "name": "deploy-test",
       "description": "A Flask web application with SQLite databases for handling user, hospital, and emergency information.",
