@@ -29,25 +29,6 @@
         }
       ]
     },
-    "database": {
-      "type": "sqlite",
-      "databases": [
-        {
-          "name": "users.db",
-          "tables": [
-            "users",
-            "hospitals",
-            "emergencies"
-          ]
-        },
-        {
-          "name": "contact.db",
-          "tables": [
-            "contact"
-          ]
-        }
-      ]
-    },
     "routes": [
       {
         "path": "/",
@@ -94,9 +75,5 @@
         "methods": ["GET", "POST"],
         "description": "Contact form"
       }
-    ],
-    "settings": {
-      "debug": true,
-      "secret_key": "your_secret_key"
-    }
+    ]
   }
