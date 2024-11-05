@@ -1,0 +1,102 @@
+{
+    "version": "1.0",
+    "app": {
+      "name": "deploy-test",
+      "description": "A Flask web application with SQLite databases for handling user, hospital, and emergency information.",
+      "language": "python",
+      "framework": "flask",
+      "entry_point": "app.py",
+      "dependencies": [
+        {
+          "name": "flask",
+          "version": "latest"
+        },
+        {
+          "name": "sqlite3",
+          "version": "latest"
+        },
+        {
+          "name": "pathlib",
+          "version": "latest"
+        },
+        {
+          "name": "hashlib",
+          "version": "latest"
+        },
+        {
+          "name": "requests",
+          "version": "latest"
+        }
+      ]
+    },
+    "database": {
+      "type": "sqlite",
+      "databases": [
+        {
+          "name": "users.db",
+          "tables": [
+            "users",
+            "hospitals",
+            "emergencies"
+          ]
+        },
+        {
+          "name": "contact.db",
+          "tables": [
+            "contact"
+          ]
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/",
+        "methods": ["GET"],
+        "description": "Home page"
+      },
+      {
+        "path": "/signup",
+        "methods": ["GET", "POST"],
+        "description": "User signup"
+      },
+      {
+        "path": "/login",
+        "methods": ["GET", "POST"],
+        "description": "User login"
+      },
+      {
+        "path": "/dashboard",
+        "methods": ["GET", "POST"],
+        "description": "User dashboard"
+      },
+      {
+        "path": "/send_emergency",
+        "methods": ["POST"],
+        "description": "Send emergency information"
+      },
+      {
+        "path": "/signup+hospital",
+        "methods": ["GET", "POST"],
+        "description": "Hospital signup"
+      },
+      {
+        "path": "/login+hospital",
+        "methods": ["GET", "POST"],
+        "description": "Hospital login"
+      },
+      {
+        "path": "/dashboard+hospital",
+        "methods": ["GET", "POST"],
+        "description": "Hospital dashboard"
+      },
+      {
+        "path": "/contact",
+        "methods": ["GET", "POST"],
+        "description": "Contact form"
+      }
+    ],
+    "settings": {
+      "debug": true,
+      "secret_key": "your_secret_key"
+    }
+  }
