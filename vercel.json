@@ -1,6 +1,6 @@
 {
     "version": "2",
-    "app": {
+    "builds": {
       "name": "deploy-test",
       "description": "A Flask web application with SQLite databases for handling user, hospital, and emergency information.",
       "language": "python",
